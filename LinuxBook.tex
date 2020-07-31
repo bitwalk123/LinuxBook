@@ -1,0 +1,123 @@
+\documentclass[a4j]{jreport}
+\usepackage{alltt}
+\usepackage{ascmac}
+\usepackage{makeidx}
+\usepackage{url}
+\makeindex
+
+\begin{document}
+
+\title{Linuxの教科書}
+\author{須栗歩人}
+\maketitle
+
+% 目次
+\tableofcontents
+
+% 部
+\part{基本的なコマンド}
+
+% 章
+\chapter{ファイルとファイルシステム管理}
+
+%%% ls
+\section{\texttt{\index{ls}} --- ファイルやディレクトリの参照}
+
+\texttt{ls}は、ファイルの一覧を表示するコマンドです。
+
+\begin{itembox}[l]{使用例}
+	\begin{alltt}\texttt{\$ ls
+		ダウンロード  デスクトップ  ビデオ  画像
+		テンプレート  ドキュメント  音楽    公開}\end{alltt}
+\end{itembox}
+
+%%% cp
+\section{\texttt{\index{cp}} --- ファイルのコピー}
+
+\texttt{cp}は、ファイルをある場所から別の場所へコピーするコマンドです。
+
+\begin{itembox}[l]{使用例}
+	\begin{alltt}\texttt{\$ cp \textit{filename1 filename2}}\end{alltt}
+\end{itembox}
+
+%%% mv
+\section{\texttt{\index{mv}} --- ファイルの移動}
+
+\texttt{mv}は、ファイルやディレクトリの移動、名前の変更をするコマンドです。
+
+\begin{itembox}[l]{使用例}
+	\begin{alltt}\texttt{\$ mv \textit{filename1 filename2}}\end{alltt}
+\end{itembox}
+
+%%% rm
+\section{\texttt{\index{rm}} --- ファイルの削除}
+
+\texttt{rm}は、ファイルシステムよりファイルを削除するコマンドです。
+
+\begin{itembox}[l]{使用例}
+	\begin{alltt}\texttt{\$ rm \textit{filename}}\end{alltt}
+\end{itembox}
+
+%%% pwd
+\section{\texttt{\index{pwd}} --- 現在の作業ディレクトリ名の表示}
+
+\texttt{pwd}は、現在の作業ディレクトリのフルパスを出力するコマンドです。
+
+\begin{itembox}[l]{使用例}
+	\begin{alltt}\texttt{\$ pwd
+			/home/bitwalk}\end{alltt}
+\end{itembox}
+
+%%% cd
+\section{\texttt{\index{cd}} --- ディレクトリの変更}
+
+\texttt{cd}は、シェル等の現在の作業ディレクトリを変更するコマンドです。
+
+\begin{itembox}[l]{使用例}
+	\begin{alltt}\texttt{\$ cd ダウンロード}\end{alltt}
+\end{itembox}
+
+%%% mkdir
+\section{\texttt{\index{mkdir}} --- ディレクトリの作成}
+
+\texttt{mkdir}は、ディレクトリを作成するコマンドです。
+
+\begin{itembox}[l]{使用例}
+	\begin{alltt}\texttt{\$ mkdir \textit{dirname}}\end{alltt}
+\end{itembox}
+
+%%% cat
+\section{\texttt{\index{cat}} --- ファイルの内容を表示}
+
+\texttt{cat}は、ファイルを連結させたり表示したりするのに用いるコマンドです。
+
+\begin{itembox}[l]{使用例}
+	\begin{alltt}\texttt{\$ cat .bash_profile
+			# .bash_profile
+			
+			# Get the aliases and functions
+			if [ -f ~/.bashrc ]; then
+			. ~/.bashrc
+			fi
+			
+			# User specific environment and startup programs
+			\$ 
+		}\end{alltt}
+\end{itembox}
+
+%%% find
+\section{\texttt{\index{find}} --- ファイルの検索}
+
+\texttt{find}は、ファイルシステムの１つ以上のディレクトリツリー上で検索を行い、ユーザーが指定した基準にマッチするファイルを探すコマンドです。
+
+\begin{itembox}[l]{使用例}
+	\begin{alltt}\texttt{\$ }\end{alltt}
+\end{itembox}
+
+%%% 関連図書
+\begin{thebibliography}{99}
+	\item Wikipedia（ウィキペディア） \url{https://ja.wikipedia.org/}
+\end{thebibliography}
+
+\printindex
+\end{document}
