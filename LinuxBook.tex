@@ -114,6 +114,51 @@
 	\begin{alltt}\texttt{\$ }\end{alltt}
 \end{itembox}
 
+%%% which
+\section{\texttt{\index{which}} --- コマンドのパスを表示}
+
+\texttt{witch}は、指定したコマンドプログラムのフルパスを表示するコマンドです。
+
+\begin{itembox}[l]{使用例}
+	\begin{alltt}\texttt{\$ which cp
+			/usr/bin/cp}\end{alltt}
+\end{itembox}
+
+%%% which
+\section{\texttt{\index{man}} --- コマンドのパスを表示}
+
+\texttt{man}は、指定したコマンドプログラムのマニュアルを表示するコマンドです。
+
+\begin{itembox}[l]{使用例}
+	\begin{alltt}\texttt{\$ man ls
+	LS(1)                          ユーザーコマンド                          LS(1)
+	
+	名前
+	ls - ディレクトリの内容をリスト表示する
+	
+	書式
+	ls [オプション]... [ファイル]...
+	
+	説明
+	FILE   (デフォルトは現在のディレクトリ)  に関する情報を一覧表示します。
+	-cftuvSUX のいずれも指定されず、 --sort も指定されていない場合、 要素は
+	アルファベット順でソートされます。
+	
+	長いオプションで必須となっている引数は短いオプションでも必須です。
+	
+	-a, --all
+	. で始まる要素を無視しない
+	
+	-A, --almost-all
+	. および .. を一覧表示しない
+	
+	--author                -l と合わせて使用した時、各ファイルの作成者を表
+	示する
+	Manual page ls(1) line 1 (press h for help or q to quit)}\end{alltt}
+\end{itembox}
+
+
+
 %%% 関連図書
 \begin{thebibliography}{99}
 	\item Wikipedia（ウィキペディア） \url{https://ja.wikipedia.org/}
