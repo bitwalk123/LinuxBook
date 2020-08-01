@@ -5,7 +5,9 @@
 \usepackage{dirtree}
 \usepackage{float}
 \usepackage[dvipdfmx]{graphicx}
+\usepackage{makeidx}
 \usepackage{url}
+\makeindex
 
 \begin{document}
 
@@ -34,7 +36,7 @@ Linuxを使うために、とりあえずおぼえておきたいコマンドを
 
 【ファイルとファイルシステム管理】\\
 
-\texttt{ls}は、ファイルの一覧を表示するコマンドです。\\
+\texttt{ls}\index{ls}は、ファイルの一覧を表示するコマンドです。\\
 
 \begin{itembox}[l]{使用例}
 	\begin{alltt}\texttt{\$ ls
@@ -47,7 +49,7 @@ Linuxを使うために、とりあえずおぼえておきたいコマンドを
 
 【ファイルとファイルシステム管理】\\
 
-\texttt{cp}は、ファイルをある場所から別の場所へコピーするコマンドです。\\
+\texttt{cp}\index{cp}は、ファイルをある場所から別の場所へコピーするコマンドです。\\
 
 \begin{itembox}[l]{使用例}
 	\begin{alltt}\texttt{\$ cp \textit{filename1 filename2}}\end{alltt}
@@ -58,7 +60,7 @@ Linuxを使うために、とりあえずおぼえておきたいコマンドを
 
 【ファイルとファイルシステム管理】\\
 
-\texttt{mv}は、ファイルやディレクトリの移動、名前の変更をするコマンドです。\\
+\texttt{mv}\index{mv}は、ファイルやディレクトリの移動、名前の変更をするコマンドです。\\
 
 \begin{itembox}[l]{使用例}
 	\begin{alltt}\texttt{\$ mv \textit{filename1 filename2}}\end{alltt}
@@ -69,7 +71,7 @@ Linuxを使うために、とりあえずおぼえておきたいコマンドを
 
 【ファイルとファイルシステム管理】\\
 
-\texttt{rm}は、ファイルシステムよりファイルを削除するコマンドです。\\
+\texttt{rm}\index{rm}は、ファイルシステムよりファイルを削除するコマンドです。\\
 
 \begin{itembox}[l]{使用例}
 	\begin{alltt}\texttt{\$ rm \textit{filename}}\end{alltt}
@@ -80,7 +82,7 @@ Linuxを使うために、とりあえずおぼえておきたいコマンドを
 
 【ファイルとファイルシステム管理】\\
 
-\texttt{pwd}は、現在の作業ディレクトリのフルパスを出力するコマンドです。\\
+\texttt{pwd}\index{pwd}は、現在の作業ディレクトリのフルパスを出力するコマンドです。\\
 
 \begin{itembox}[l]{使用例}
 	\begin{alltt}\texttt{\$ pwd
@@ -92,7 +94,7 @@ Linuxを使うために、とりあえずおぼえておきたいコマンドを
 
 【ファイルとファイルシステム管理】\\
 
-\texttt{cd}は、シェル等の現在の作業ディレクトリを変更するコマンドです。\\
+\texttt{cd}\index{cd}は、シェル等の現在の作業ディレクトリを変更するコマンドです。\\
 
 \begin{itembox}[l]{使用例}
 	\begin{alltt}\texttt{\$ cd ダウンロード}\end{alltt}
@@ -103,7 +105,7 @@ Linuxを使うために、とりあえずおぼえておきたいコマンドを
 
 【ファイルとファイルシステム管理】\\
 
-\texttt{mkdir}は、ディレクトリを作成するコマンドです。\\
+\texttt{mkdir}\index{mkdir}は、ディレクトリを作成するコマンドです。\\
 
 \begin{itembox}[l]{使用例}
 	\begin{alltt}\texttt{\$ mkdir \textit{dirname}}\end{alltt}
@@ -114,7 +116,7 @@ Linuxを使うために、とりあえずおぼえておきたいコマンドを
 
 【ファイルとファイルシステム管理】\\
 
-\texttt{cat}は、ファイルを連結させたり表示したりするのに用いるコマンドです。\\
+\texttt{cat}\index{cat}は、ファイルを連結させたり表示したりするのに用いるコマンドです。\\
 
 \begin{itembox}[l]{使用例}
 	\begin{alltt}\texttt{\$ cat .bash_profile
@@ -135,7 +137,7 @@ Linuxを使うために、とりあえずおぼえておきたいコマンドを
 
 【検索】\\
 
-\texttt{find}は、ファイルシステムの１つ以上のディレクトリツリー上で検索を行い、ユーザーが指定した基準にマッチするファイルを探すコマンドです。\\
+\texttt{find}\index{find}は、ファイルシステムの１つ以上のディレクトリツリー上で検索を行い、ユーザーが指定した基準にマッチするファイルを探すコマンドです。\\
 
 \begin{itembox}[l]{使用例}
 	\begin{alltt}\texttt{\$ }\end{alltt}
@@ -146,7 +148,7 @@ Linuxを使うために、とりあえずおぼえておきたいコマンドを
 
 【検索】\\
 
-\texttt{witch}は、指定したコマンドプログラムのフルパスを検索して表示するコマンドです。\\
+\texttt{which}\index{which}は、指定したコマンドプログラムのフルパスを検索して表示するコマンドです。\\
 
 \begin{itembox}[l]{使用例}
 	\begin{alltt}\texttt{\$ which cp
@@ -158,7 +160,7 @@ Linuxを使うために、とりあえずおぼえておきたいコマンドを
 
 【マニュアル】\\
 
-\texttt{man}は、指定したコマンドプログラムのマニュアルを表示するコマンドです。\\
+\texttt{man}\index{man}は、指定したコマンドプログラムのマニュアルを表示するコマンドです。\\
 
 \begin{itembox}[l]{使用例}
 	\begin{alltt}\texttt{\$ man ls
@@ -192,7 +194,7 @@ Linuxを使うために、とりあえずおぼえておきたいコマンドを
 % 章
 \chapter{ファイルシステム}
 
-LinuxなどのUNIX系OSの標準的なディレクトリ構成を定めたFHS, \textit{Filesystem Hierarchy Standard}で、ディレクトリの名前や構成、ファイルの名前などを定めています。
+LinuxなどのUNIX系OSの標準的なディレクトリ構成を定めたFHS\index{FHS}, \textit{Filesystem Hierarchy Standard}で、ディレクトリの名前や構成、ファイルの名前などを定めています。
 
 多くのLinuxディストリビューションはFHS準拠しています。
 
@@ -223,5 +225,7 @@ LinuxなどのUNIX系OSの標準的なディレクトリ構成を定めたFHS, \
 \begin{thebibliography}{99}
 	\item Wikipedia（ウィキペディア） \url{https://ja.wikipedia.org/}
 \end{thebibliography}
+
+\printindex
 
 \end{document}
