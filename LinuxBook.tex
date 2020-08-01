@@ -1,9 +1,11 @@
 \documentclass[a4j]{jreport}
 \usepackage{alltt}
 \usepackage{ascmac}
-\usepackage{makeidx}
+\usepackage{color}
+\usepackage{dirtree}
+\usepackage{float}
+\usepackage[dvipdfmx]{graphicx}
 \usepackage{url}
-\makeindex
 
 \begin{document}
 
@@ -14,16 +16,25 @@
 % 目次
 \tableofcontents
 
-% 部
-\part{基本的なコマンド}
-
 % 章
-\chapter{ファイルとファイルシステム管理}
+\chapter{おぼえておきたいコマンド}
+
+Linuxのデスクトップ環境では、Linuxコマンドを知らなくともGUI操作で多くのことができます。しかしそれでも、いくつかのコマンドを知っていればさらに便利で、かつ、LinuxというOSを理解するのに役立ちます。
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=10cm]{pic/gnome-terminal.png}
+	\caption{ターミナルエミュレーター}
+\end{figure}
+
+Linuxを使うために、とりあえずおぼえておきたいコマンドをまとめました。\\
 
 %%% ls
-\section{\texttt{\index{ls}} --- ファイルやディレクトリの参照}
+\section{\texttt{ls} --- ファイルやディレクトリの参照}
 
-\texttt{ls}は、ファイルの一覧を表示するコマンドです。
+【ファイルとファイルシステム管理】\\
+
+\texttt{ls}は、ファイルの一覧を表示するコマンドです。\\
 
 \begin{itembox}[l]{使用例}
 	\begin{alltt}\texttt{\$ ls
@@ -32,36 +43,44 @@
 \end{itembox}
 
 %%% cp
-\section{\texttt{\index{cp}} --- ファイルのコピー}
+\section{\texttt{cp} --- ファイルのコピー}
 
-\texttt{cp}は、ファイルをある場所から別の場所へコピーするコマンドです。
+【ファイルとファイルシステム管理】\\
+
+\texttt{cp}は、ファイルをある場所から別の場所へコピーするコマンドです。\\
 
 \begin{itembox}[l]{使用例}
 	\begin{alltt}\texttt{\$ cp \textit{filename1 filename2}}\end{alltt}
 \end{itembox}
 
 %%% mv
-\section{\texttt{\index{mv}} --- ファイルの移動}
+\section{\texttt{mv} --- ファイルの移動}
 
-\texttt{mv}は、ファイルやディレクトリの移動、名前の変更をするコマンドです。
+【ファイルとファイルシステム管理】\\
+
+\texttt{mv}は、ファイルやディレクトリの移動、名前の変更をするコマンドです。\\
 
 \begin{itembox}[l]{使用例}
 	\begin{alltt}\texttt{\$ mv \textit{filename1 filename2}}\end{alltt}
 \end{itembox}
 
 %%% rm
-\section{\texttt{\index{rm}} --- ファイルの削除}
+\section{\texttt{rm} --- ファイルの削除}
 
-\texttt{rm}は、ファイルシステムよりファイルを削除するコマンドです。
+【ファイルとファイルシステム管理】\\
+
+\texttt{rm}は、ファイルシステムよりファイルを削除するコマンドです。\\
 
 \begin{itembox}[l]{使用例}
 	\begin{alltt}\texttt{\$ rm \textit{filename}}\end{alltt}
 \end{itembox}
 
 %%% pwd
-\section{\texttt{\index{pwd}} --- 現在の作業ディレクトリ名の表示}
+\section{\texttt{pwd} --- 現在の作業ディレクトリ名の表示}
 
-\texttt{pwd}は、現在の作業ディレクトリのフルパスを出力するコマンドです。
+【ファイルとファイルシステム管理】\\
+
+\texttt{pwd}は、現在の作業ディレクトリのフルパスを出力するコマンドです。\\
 
 \begin{itembox}[l]{使用例}
 	\begin{alltt}\texttt{\$ pwd
@@ -69,27 +88,33 @@
 \end{itembox}
 
 %%% cd
-\section{\texttt{\index{cd}} --- ディレクトリの変更}
+\section{\texttt{cd} --- ディレクトリの変更}
 
-\texttt{cd}は、シェル等の現在の作業ディレクトリを変更するコマンドです。
+【ファイルとファイルシステム管理】\\
+
+\texttt{cd}は、シェル等の現在の作業ディレクトリを変更するコマンドです。\\
 
 \begin{itembox}[l]{使用例}
 	\begin{alltt}\texttt{\$ cd ダウンロード}\end{alltt}
 \end{itembox}
 
 %%% mkdir
-\section{\texttt{\index{mkdir}} --- ディレクトリの作成}
+\section{\texttt{mkdir} --- ディレクトリの作成}
 
-\texttt{mkdir}は、ディレクトリを作成するコマンドです。
+【ファイルとファイルシステム管理】\\
+
+\texttt{mkdir}は、ディレクトリを作成するコマンドです。\\
 
 \begin{itembox}[l]{使用例}
 	\begin{alltt}\texttt{\$ mkdir \textit{dirname}}\end{alltt}
 \end{itembox}
 
 %%% cat
-\section{\texttt{\index{cat}} --- ファイルの内容を表示}
+\section{\texttt{cat} --- ファイルの内容を表示}
 
-\texttt{cat}は、ファイルを連結させたり表示したりするのに用いるコマンドです。
+【ファイルとファイルシステム管理】\\
+
+\texttt{cat}は、ファイルを連結させたり表示したりするのに用いるコマンドです。\\
 
 \begin{itembox}[l]{使用例}
 	\begin{alltt}\texttt{\$ cat .bash_profile
@@ -106,18 +131,22 @@
 \end{itembox}
 
 %%% find
-\section{\texttt{\index{find}} --- ファイルの検索}
+\section{\texttt{find} --- ファイルの検索}
 
-\texttt{find}は、ファイルシステムの１つ以上のディレクトリツリー上で検索を行い、ユーザーが指定した基準にマッチするファイルを探すコマンドです。
+【検索】\\
+
+\texttt{find}は、ファイルシステムの１つ以上のディレクトリツリー上で検索を行い、ユーザーが指定した基準にマッチするファイルを探すコマンドです。\\
 
 \begin{itembox}[l]{使用例}
 	\begin{alltt}\texttt{\$ }\end{alltt}
 \end{itembox}
 
 %%% which
-\section{\texttt{\index{which}} --- コマンドのパスを表示}
+\section{\texttt{which} --- コマンドのパスを表示}
 
-\texttt{witch}は、指定したコマンドプログラムのフルパスを表示するコマンドです。
+【検索】\\
+
+\texttt{witch}は、指定したコマンドプログラムのフルパスを検索して表示するコマンドです。\\
 
 \begin{itembox}[l]{使用例}
 	\begin{alltt}\texttt{\$ which cp
@@ -125,9 +154,11 @@
 \end{itembox}
 
 %%% which
-\section{\texttt{\index{man}} --- コマンドのパスを表示}
+\section{\texttt{man} --- コマンドのマニュアルを表示}
 
-\texttt{man}は、指定したコマンドプログラムのマニュアルを表示するコマンドです。
+【マニュアル】\\
+
+\texttt{man}は、指定したコマンドプログラムのマニュアルを表示するコマンドです。\\
 
 \begin{itembox}[l]{使用例}
 	\begin{alltt}\texttt{\$ man ls
@@ -154,15 +185,43 @@
 	
 	--author                -l と合わせて使用した時、各ファイルの作成者を表
 	示する
-	Manual page ls(1) line 1 (press h for help or q to quit)}\end{alltt}
+	Manual page ls(1) line 1 (press h for help or q to quit)
+}\end{alltt}
 \end{itembox}
 
+% 章
+\chapter{ファイルシステム}
 
+LinuxなどのUNIX系OSの標準的なディレクトリ構成を定めたFHS, \textit{Filesystem Hierarchy Standard}で、ディレクトリの名前や構成、ファイルの名前などを定めています。
+
+多くのLinuxディストリビューションはFHS準拠しています。
+
+\section{FHS 3.0 (2015-05-18)}
+	\dirtree{%
+	.1 / ファイルシステム階層全体の第一階層（ルートディレクトリ）.
+	.2 /bin 一般ユーザー向けの基本コマンドの実行ファイル.
+	.2 /boot ブートローダー関連のファイル群.
+	.2 /dev 基本デバイス.
+	.2 /etc システム全体に関わる固有設定ファイル群.
+	.2 /home ユーザーの ホームディレクトリ.
+	.3 bitwalk（ユーザーアカウント例）.
+	.2 /lib 実行ファイルの基本となるライブラリ群.
+	.2 /media リムーバブル媒体のマウントポイント.
+	.2 /mnt ファイルシステムの一時マウントポイント.
+	.2 /opt オプションパッケージのインストール用.
+	.2 /proc カーネルやプロセスの状態に関する情報.
+	.2 /root rootユーザのホームディレクトリ.
+	.2 /run 実行時の可変データ.
+	.2 /sbin システム管理系コマンドの実行ファイル群.
+	.2 /srv システムによって提供されたサイト固有のデータ.
+	.2 /tmp 一時ファイル置場.
+	.2 /usr マルチユーザのためのユーティリティとアプリケーション用.
+	.2 /var 可変なファイル群.
+}
 
 %%% 関連図書
 \begin{thebibliography}{99}
 	\item Wikipedia（ウィキペディア） \url{https://ja.wikipedia.org/}
 \end{thebibliography}
 
-\printindex
 \end{document}
